@@ -1,0 +1,189 @@
+{% extends 'layout.html' %} {% block body %}
+<link rel="stylesheet" href="{{url_for('static',filename='blogs_css.css')}}" />
+<div class="main_blogs">
+  <div class="title">
+    <h1>Sports</h1>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Sports/cricket_india/poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('cricket_india') }}" class="card-title" >
+            The Evolution of Cricket in India: From Colonial Pastime to National Obsession
+        </a>
+        <p class="card-description">
+            Cricket is more than just a sport in India; it's a religion. The journey of
+            cricket in India, from being a colonial pastime to becoming a national
+            obsession, is a fascinating tale of passion, resilience, and unyielding....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('cricket_india') }}" class="card-button" >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Sports/esports/poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('esports') }}" class="card-title" >
+            The Rise of Esports: Exploring the World of Competitive Gaming
+        </a>
+        <p class="card-description">
+            In recent years, esports has emerged as one of the fastest-growing industries
+            in the world, captivating millions of fans and generating billions of dollars
+            in revenue. What was once considered a niche hobby has now become a global
+            phenomenon, with professi....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('esports') }}" class="card-button" >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Sports/iconic_moment/poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('iconic_moment') }}" class="card-title" >
+            Top 10 Iconic Moments in Indian Sports History        
+        </a>
+        <p class="card-description">
+            India has a rich and storied sports history, marked by countless moments of
+            triumph, glory, and inspiration. From cricket to hockey, and from athletics to
+            badminton, Indian athletes have achieved remarkable feats on both the national
+            and international st....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('iconic_moment') }}" class="card-button" >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Sports/new_technology/tech_poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('new_technology') }}" class="card-title" >
+            How Technology is Changing the Way We Play and Watch Sports        
+        </a>
+        <p class="card-description">
+            Technology has transformed almost every aspect of our lives, and sports are no
+            exception. From player performance analysis to enhancing the fan experience,
+            the impact of technology on sports is profound and far-reaching. Let's explore
+            how technology is changing the way we....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a
+          href="{{ url_for('new_technology') }}"
+          class="card-button"
+          
+        >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Sports/indian_games/poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('indian_games') }}" class="card-title" >
+            Exploring Traditional Indian Sports: From Kho Kho to Mallakhamb        
+        </a>
+        <p class="card-description">
+            India has a rich and diverse sporting heritage that stretches back thousands
+            of years. While cricket may be the most popular sport in the country today,
+            there are countless traditional Indian sports that have been played for
+            centuries and hold a special place in the hearts of millions of people. In
+            this blog....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('indian_games') }}" class="card-button" >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Sports/life_of_cricketer/poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('life_of_cricketer') }}" class="card-title" >
+            Behind the Scenes: A Day in the Life of an Indian Cricketer
+        </a>
+        <p class="card-description">
+            Indian cricketers are revered figures in the country, with millions of fans
+            eagerly following their every move on and off the field. While cricket matches
+            provide a glimpse into their lives as athletes, what goes on behind the scenes
+            remains a mystery to many. In this blog post, we'll take you behind...
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('life_of_cricketer') }}" class="card-button" >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Sports/sports_world/poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a
+          href="{{ url_for('sports_world') }}"
+          class="card-title"
+          
+        >
+        Exploring Unusual Sports From Around the World
+        </a>
+        <p class="card-description">
+            Sports have always been an integral part of human culture, offering a unique
+            blend of physical activity, competition, and entertainment. While popular
+            sports like football, basketball, and cricket dominate the global stage, there
+            are countless lesser-known sports from around the world that are equally
+            fascinating and unique....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a
+          href="{{ url_for('sports_world') }}"
+          class="card-button"
+          
+        >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

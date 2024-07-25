@@ -1,0 +1,157 @@
+{% extends 'layout.html' %} {% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='blog.css') }}" />
+
+<div class="search">
+  <form action="/blogs" method="post">
+    <input
+      type="text"
+      name="topic"
+      class="search_blog"
+      placeholder="Search for Title"
+      required
+    />
+    <button type="submit" class="search_button">Search</button>
+  </form>
+</div>
+<div class="mainpage">
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+  messages %} {% for category, message in messages %}
+  <div class="flashmessage" id="flash_{{ category }}">{{ message }}</div>
+  {% endfor %}
+  <meta http-equiv="refresh" content="5" />
+  {% endif %} {% endwith %} {% if Searched %} {% if blogs %}
+  <div class="row">
+    {% for user_blog in blogs %}
+    <div class="blogpost">
+      <!-- Image -->
+      <div class="blogimage">
+        <img
+          src="{{ url_for('static', filename='upload_images/image_blogid_' + user_blog.id|string + '.jpg') }}"
+          alt="Image"
+        />
+      </div>
+      <div class="blogcontent">
+        <div id="part1">
+          <!-- Date and Name -->
+          <p class="blog-tag">
+            {{ user_blog.date.strftime('%d-%B %Y') }} | {{ user_blog.name }}
+          </p>
+          <!-- Title -->
+          {% if user_blog.title|length > 25 %} {% if
+          blogosphere_subscribers.query.filter_by(email=user_blog.email).first().verified
+          %}
+
+          <h3
+            class="box-title .scrolling-title"
+            style="color: aqua; font-weight: bold"
+          >
+            {{ user_blog.title[:50] }}
+          </h3>
+          {% else %}
+          <h3 class="box-title .scrolling-title">{{ user_blog.title[:20] }}</h3>
+          {% endif %} {% else %} {% if
+          blogosphere_subscribers.query.filter_by(email=user_blog.email).first().verified
+          %}
+
+          <h3
+            class="box-title"
+            style="color: rgb(194, 130, 255); font-weight: bold"
+          >
+            {{ user_blog.title[:50] }}
+          </h3>
+          {% else %}
+          <h3 class="box-title">{{ user_blog.title[:20] }}</h3>
+          {% endif %} {% endif %}
+          <!-- Content -->
+          <p class="description">
+            {% if user_blog.content|length > 160 %} {{
+            user_blog.content[:160]}}... {% else %} {{ user_blog.content }} {%
+            endif %}
+          </p>
+        </div>
+        <div id="part2">
+          <!-- Hr line and ReadMore Button -->
+          {% if user_blog.content|length > 160 %}
+          <hr />
+          <a
+            href="{{ url_for('full_blog', email=user_blog.email, blog_id=user_blog.id) }}"
+            class="button"
+            >Read More</a
+          >
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+  {% else %}
+  <div class="flashmessage" id="flash_notfound">No blog has been uploaded.</div>
+  {% endif %} {% else %}
+  <div class="row">
+    {% for user_blog in blogs %}
+    <div class="blogpost">
+      <!-- Image -->
+      <div class="blogimage">
+        <img
+          src="{{ url_for('static', filename='upload_images/image_blogid_' + user_blog.id|string + '.jpg') }}"
+          alt="Image"
+        />
+      </div>
+      <div class="blogcontent">
+        <div id="part1">
+          <!-- Date and Name -->
+          <p class="blog-tag">
+            {{ user_blog.date.strftime('%d-%B %Y') }} | {{ user_blog.name }}
+          </p>
+          <!-- Title -->
+          {% if user_blog.title|length > 25 %} {% if
+          blogosphere_subscribers.query.filter_by(email=user_blog.email).first().verified
+          %}
+
+          <h3
+            class="box-title .scrolling-title"
+            style="color: aqua; font-weight: bold"
+          >
+            {{ user_blog.title[:50] }}
+          </h3>
+          {% else %}
+          <h3 class="box-title .scrolling-title">{{ user_blog.title[:20] }}</h3>
+          {% endif %} {% else %} {% if
+          blogosphere_subscribers.query.filter_by(email=user_blog.email).first().verified
+          %}
+
+          <h3
+            class="box-title"
+            style="color: rgb(194, 130, 255); font-weight: bold"
+          >
+            {{ user_blog.title[:50] }}
+          </h3>
+          {% else %}
+          <h3 class="box-title">{{ user_blog.title[:20] }}</h3>
+          {% endif %} {% endif %}
+          <!-- Content -->
+          <p class="description">
+            {% if user_blog.content|length > 160 %} {{
+            user_blog.content[:160]}}... {% else %} {{ user_blog.content }} {%
+            endif %}
+          </p>
+        </div>
+        <div id="part2">
+          <!-- Hr line and ReadMore Button -->
+          {% if user_blog.content|length > 160 %}
+          <hr />
+          <a
+            href="{{ url_for('full_blog', email=user_blog.email, blog_id=user_blog.id) }}"
+            class="button"
+            >Read More</a
+          >
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

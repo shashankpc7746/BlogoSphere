@@ -1,0 +1,201 @@
+{% extends 'layout.html' %} {% block body %}
+<link rel="stylesheet" href="{{url_for('static',filename='blogs_css.css')}}" />
+<div class="main_blogs">
+  <div class="title">
+    <h1>Technology</h1>
+  </div>
+  
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="\static\images\blog_img\Tech\AI_realtiy\poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('ai_er') }}" class="card-title" >
+          Exploring Extended Reality (XR): The Next Frontier in Immersive
+          Technology
+        </a>
+        <p class="card-description">
+          In recent years, technological advancements have propelled us into a
+          world where reality is no longer confined to the physical realm. With
+          the rise of immersive technologies like Virtual Reality (VR),
+          Augmented Reality (AR), and Mixed Reality (MR), we find ourselves on
+          the brink of....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('ai_er') }}" class="card-button" >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="\static\images\blog_img\Tech\AI_Mind\AI_poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('ai_m') }}" class="card-title" >
+          Mind and Machine: Chronicles of AI Advancements
+        </a>
+        <p class="card-description">
+          The dynamic intersection between human cognition and technological
+          innovation unveils a profound journey into the evolution of our
+          collective intelligence. As advancements in technology continue to
+          push the boundaries of what is possible, our understanding of
+          cognition expands, intertwining....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('ai_m') }}" class="card-button" >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="\static\images\blog_img\Tech\AI_Healthcare\poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a
+          href="{{ url_for('ai_healthcare') }}"
+          class="card-title"
+          
+        >
+          AI in Healthcare: Transforming Medicine with Intelligence
+        </a>
+        <p class="card-description">
+          Artificial Intelligence (AI) has emerged as a powerful force in
+          revolutionizing various industries, and healthcare is no exception.
+          The integration of AI technologies into healthcare systems holds
+          immense promise for improving patient outcomes, enhancing diagnostics,
+          and streamlining medical processes....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a
+          href="{{ url_for('ai_healthcare') }}"
+          class="card-button"
+          
+        >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Tech/AI_Drug/poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('ai_drug') }}" class="card-title" > 
+          AI in Drug Discovery: Accelerating Innovation
+        </a>
+        <p class="card-description">
+          Artificial Intelligence (AI) has emerged as a game-changer in the
+          field of drug discovery. Its ability to process vast amounts of data,
+          identify patterns, and predict outcomes has revolutionized the way
+          pharmaceutical research is conducted. Let's delve into how AI is
+          transforming drug discovery and shaping the future of medicine....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('ai_drug') }}" class="card-button" >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="\static\images\blog_img\Tech\AI_metaverse\meta_poster.jpeg" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('ai_meta') }}" class="card-title" >
+          Navigating the New Frontier: The Metaverse
+        </a>
+        <p class="card-description">
+          In the digital age, the concept of reality is evolving beyond our
+          physical world. The Metaverse, a term coined from science fiction, is
+          becoming a tangible realm where people can interact, work, play, and
+          live in a virtual space that transcends geographical boundaries. This
+          blog delves into the essence of the Metaverse, its potential....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('ai_meta') }}" class="card-button" >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="\static\images\blog_img\Tech\Voice_tech\poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a
+          href="{{ url_for('voice_tech') }}"
+          class="card-title"
+          
+        >
+          The Rise of Voice Technology: Beyond Siri and Alexa
+        </a>
+        <p class="card-description">
+          In recent years, voice technology has emerged as one of the most
+          significant trends in the tech industry. What started with virtual
+          assistants like Siri and Alexa has now expanded into a wide range of
+          applications, from smart speakers to voice-enabled cars. The rise of
+          voice technology is revolutionizing....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a
+          href="{{ url_for('voice_tech') }}"
+          class="card-button"
+          
+        >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="\static\images\blog_img\Tech\quantum\poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('quantum') }}" class="card-title" >
+          The Quantum Computer Chronicle: Navigating the World of Quantum
+          Computing
+        </a>
+        <p class="card-description">
+          In the realm of modern computing, a revolutionary technology is on the
+          horizon that promises to transform the landscape of data processing
+          and computational power: quantum computing. While still in its
+          infancy, quantum computing holds....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('quantum') }}" class="card-button" >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,170 @@
+{% extends 'layout.html' %} {% block body %}
+<link rel="stylesheet" href="{{url_for('static',filename='blogs_css.css')}}" />
+<div class="main_blogs">
+  <div class="title">
+    <h1>Food</h1>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Food/Vegan/poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('vegan') }}" class="card-title">
+          The Rise of Plant-Based Cuisine: Navigating the Vegan Revolution
+        </a>
+        <p class="card-description">
+          In recent years, there has been a significant shift in the way people
+          approach their diets, with plant-based cuisine emerging at the
+          forefront of this culinary revolution. Veganism, once considered a
+          niche lifestyle choice, has now become a mainstream movement, fueled
+          by....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('vegan') }}" class="card-button"> View More </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Food/ftof/poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('ftof') }}" class="card-title">
+          From Farm to Fork: Exploring Sustainable Food Practices
+        </a>
+        <p class="card-description">
+          In recent years, the concept of sustainability has become increasingly
+          important in various aspects of our lives, including food production
+          and consumption. "From Farm to Fork" encapsulates the journey food
+          takes from its origins on the farm to its ultimate destination on our
+          plates. This journey involves numerous....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('ftof') }}" class="card-button"> View More </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Food/Culinary/poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('culinary') }}" class="card-title">
+          Culinary Adventures: Exploring Global Food Trends
+        </a>
+        <p class="card-description">
+          In a world where cultures intertwine and borders blur, culinary
+          exploration has become a journey that transcends geographical
+          boundaries. From street stalls in bustling Asian markets to
+          avant-garde restaurants in European capitals, the global food scene
+          offers a rich tapestry of flavors, textures, and trad....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('culinary') }}" class="card-button"> View More </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Food/Innovation/poster.jpeg" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('innovation') }}" class="card-title">
+          Food Tech Innovations: Revolutionizing the Way We Eat
+        </a>
+        <p class="card-description">
+          Innovation is a cornerstone of human progress, and nowhere is this
+          more evident than in the realm of food technology. From farm to table,
+          advancements in technology have revolutionized the way we produce,
+          process, and consume food. In this blog, we'll explore some of the
+          most exciting food....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('innovation') }}" class="card-button">
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Food/Habits/poster.jpeg" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('habits') }}" class="card-title">
+          Food for Thought: The Psychology Behind Eating Habits
+        </a>
+        <p class="card-description">
+          Eating is a fundamental aspect of human life, influenced not only by
+          biological needs but also by psychological factors. Our eating habits
+          are shaped by a complex interplay of emotions, experiences, culture,
+          and environment. In this blog, we delve food be....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('habits') }}" class="card-button"> View More </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Food/Paring/poster.jpeg" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('paring') }}" class="card-title">
+          The Art of Food Pairing: Exploring Flavor Combinations
+        </a>
+        <p class="card-description">
+          In the realm of culinary arts, there exists a harmonious dance between
+          flavors that has captivated chefs and food enthusiasts alike for
+          centuries. The art of food pairing is a delicate balance between
+          contrasting and complementary tastes, textures, and aromas....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('paring') }}" class="card-button"> View More </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Food/Photography/poster.jpeg" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('photography') }}" class="card-title">
+          Food Photography: Capturing Culinary Delights in the Digital Age
+        </a>
+        <p class="card-description">
+          In the age of social media and digital sharing, food photography has
+          emerged as a vibrant and influential art form. From Instagram feeds to
+          food blogs, captivating images of culinary creations tantalize our
+          senses and inspire us to explore new flavors and cuisines....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('photography') }}" class="card-button">
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

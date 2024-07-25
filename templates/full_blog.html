@@ -1,0 +1,25 @@
+{% extends 'layout.html' %} {% block body %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='full_blog.css') }}"
+/>
+
+<div class="blog">
+  <div class="button_goback">
+    <div class="details">
+      <h2>
+        Author: {{ blog.name }}<br />
+        Email: {{ blog.email }}
+      </h2>
+    </div>
+    <a href="{{ url_for('blog') }}" class="button"> < Previous</a>
+  </div>
+  <img
+    class="full_blog_image"
+    src="{{ url_for('static', filename='upload_images/image_blogid_' + blog.id|string + '.jpg') }}"
+    alt="Blog Image"
+  />
+  <h2 class="title">{{ blog.title }}</h2>
+  <h2 class="full_blog_content">{{ blog.content }}</h2>
+</div>
+{% endblock %}

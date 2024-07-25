@@ -1,0 +1,189 @@
+{% extends 'layout.html' %} 
+{% block body %}
+<link rel="stylesheet" href="{{url_for('static',filename='blogs_css.css')}}" />
+<div class="main_blogs">
+  <div class="title">
+    <h1>Astronomy</h1>
+  </div>
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="\static\images\blog_img\Astronomy\Aurora\aurora_poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('auroras') }}" class="card-title"  >
+          The Science Behind the Northern Lights: Auroras
+        </a>
+        <p class="card-description">
+          One of the most breathtaking natural phenomena visible from Earth is
+          the aurora, also known as the northern lights in the Northern
+          Hemisphere and the southern lights in the Southern Hemisphere. These
+          stunning displays of light, color, and motion illuminate the night
+          sky...
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('auroras') }}" class="card-button" >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Astronomy/Mars/poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('mars') }}" class="card-title" >
+          Mars Exploration: The Quest for Life Beyond Earth
+        </a>
+        <p class="card-description">
+          Mars, the red planet, has captivated the imagination of scientists and
+          the public alike for centuries. As the most Earth-like planet in our
+          solar system, Mars has long been a prime candidate in the search for
+          life beyond our own planet. Over the past few decades, numerous
+          missions have been sent to explore Mars....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('mars') }}" class="card-button" >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="static\images\blog_img\Astronomy\Blackhole\poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('blackhole') }}" class="card-title" >
+          The Enigmatic Lure of Black Holes: A Journey Through Space and Time
+        </a>
+        <p class="card-description">
+          Black holes, the mysterious titans of the cosmos, have captivated the
+          human imagination for decades. These enigmatic features of our
+          universe represent the ultimate unknown, the profound abyss where the
+          known laws of physics converge in a singularity of infinite density.
+          The recent advancements in ....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a
+          href="{{ url_for('blackhole') }}"
+          class="card-button"
+          
+        >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Astronomy/Galaxy/galaxy_poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('galaxy') }}" class="card-title" >
+          The Fascinating World of Galaxies
+        </a>
+        <p class="card-description">
+          In the vast expanse of the universe, galaxies are the building blocks
+          of the cosmos. These immense collections of stars, gas, and dust come
+          in a variety of shapes and sizes, each one unique and awe-inspiring.
+          From the majestic spiral galaxies like our own Milky Way to.s...
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('galaxy') }}" class="card-button" >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Astronomy/Comets/comets_poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('comets') }}" class="card-title" >
+          The Impact of Asteroids and Comets on Earth
+        </a>
+        <p class="card-description">
+          Throughout Earth's history, our planet has been bombarded by asteroids
+          and comets from the depths of space. These cosmic collisions have had
+          a profound impact on the Earth, shaping its surface, atmosphere, and
+          even the course of life itself. While the chances of a catastrophic
+          impact are rare, the potential consequences are so....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('comets') }}" class="card-button" >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Astronomy/Exoplanet/exo_poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('exoplanet') }}" class="card-title" >
+          The Search for Exoplanets: Worlds Beyond Our Solar System
+        </a>
+        <p class="card-description">
+          In the vastness of the universe, our own solar system is but a tiny
+          speck. Yet, as our understanding of the cosmos expands, so too does
+          our awareness of the multitude of other worlds that exist beyond our
+          own. One of the most exciting frontiers in astronomy....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a
+          href="{{ url_for('exoplanet') }}"
+          class="card-button"
+          
+        >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="/static/images/blog_img/Astronomy/Earth_magntic/poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('magnetic') }}" class="card-title" >
+          Exploring the Phenomenon of Earth's Magnetic Shift
+        </a>
+        <p class="card-description">
+          The Earth's magnetic field is a major and pivotal aspect of our
+          planet's existence. It influences everything from system of navigation
+          to the protection of atmosphere from harmful solar radiation that are
+          UV rays. But it has came to the notice that in recent times, there has
+          been a growing interest and concern about the phenomenon that ....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a href="{{ url_for('magnetic') }}" class="card-button" >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

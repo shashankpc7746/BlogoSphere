@@ -1,0 +1,38 @@
+{% extends 'layout.html' %} {% block body %}
+<link rel="stylesheet" href="{{url_for('static',filename='contact.css')}}" />
+<div class="container-fluid pt-5">
+  <div class="form">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-left" >
+      <div class="contact-left-title">
+        <h2>Get in touch</h2>
+        <hr />
+      </div>
+      <input type="hidden" name="access_key" value="dbd5d1cd-2d6f-444a-bccb-7b18a68dce41">
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        class="contact-inputs"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        class="contact-inputs"
+        required
+      />
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        class="contact-inputs"
+        required
+      ></textarea>
+      <button type="submit">Submit <img src="arrow_icon.png" alt="" /></button>
+    </form>
+    <div class="contact-right">
+      <img src="/static/images/right_img.png" alt="contact" />
+    </div>
+  </div>
+</div>
+{% endblock %}

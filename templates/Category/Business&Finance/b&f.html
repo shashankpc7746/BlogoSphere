@@ -1,0 +1,236 @@
+{% extends 'layout.html' %} {% block body %}
+<link rel="stylesheet" href="{{url_for('static',filename='blogs_css.css')}}" />
+<div class="main_blogs">
+  <div class="title">
+    <h1>Finance</h1>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="\static\images\blog_img\Finance\relation_finance\poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a
+          href="{{ url_for('relation_finance') }}"
+          class="card-title"
+           
+          >The Psychology of Money: Understanding Your Relationship with Finance
+        </a>
+        <p class="card-description">
+          Our relationship with money is complex and deeply influenced by our
+          emotions, experiences, and upbringing. Understanding the psychology of
+          money can help us make better financial decisions, manage our money
+          more effectively, and achieve our long-term financial goals...
+        </p>
+      </div>
+      <div class="text-part2">
+        <a
+          href="{{ url_for('relation_finance') }}"
+          class="card-button"
+           
+        >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img
+        src="\static\images\blog_img\Finance\personal_budget\budget_poster.png"
+      />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a
+          href="{{ url_for('personal_budget') }}"
+          class="card-title"
+           
+        >
+          The Ultimate Guide to Creating a Personal Budget
+        </a>
+        <p class="card-description">
+          Creating a personal budget is one of the most crucial steps you can
+          take toward achieving financial stability and success. A budget helps
+          you understand where your money is coming from, where it's going, and
+          how you can make the most of it. Whether you're saving for a big
+          purchase, trying to pay off debt....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a
+          href="{{ url_for('personal_budget') }}"
+          class="card-button"
+           
+        >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="\static\images\blog_img\Finance\investment\poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a
+          href="{{ url_for('investment') }}"
+          class="card-title"
+           
+        >
+          Understanding Different Types of Investments: A Beginner's Guide
+        </a>
+        <p class="card-description">
+          Investing is an essential part of building wealth and achieving
+          financial goals. However, for beginners, the world of investments can
+          seem overwhelming and complex. With so many options available, it can
+          be challenging to know where to start.....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a
+          href="{{ url_for('investment') }}"
+          class="card-button"
+           
+        >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="\static\images\blog_img\Finance\save_money\saving_poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a
+          href="{{ url_for('save_money') }}"
+          class="card-title"
+           
+        >
+          How to Save Money Effectively: Tips and Tricks
+        </a>
+        <p class="card-description">
+          Saving money is an essential part of achieving financial stability and
+          reaching your long-term financial goals. Whether you're saving for a
+          down payment on a house, building an emergency fund, or planning for
+          retirement, learning how to save money effectively is key....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a
+          href="{{ url_for('save_money') }}"
+          class="card-button"
+           
+        >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="\static\images\blog_img\Finance\rent_home\rent_poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a href="{{ url_for('rent_home') }}" class="card-title"  >
+          The Pros and Cons of Renting vs. Buying a Home
+        </a>
+        <p class="card-description">
+          Deciding whether to rent or buy a home is one of the biggest financial
+          decisions you'll ever make. Both options have their advantages and
+          disadvantages, and the right choice for you will depend on your
+          individual circumstances, financial goals, and personal
+          preferences....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a
+          href="{{ url_for('rent_home') }}"
+          class="card-button"
+           
+        >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img
+        src="\static\images\blog_img\Finance\financial_mistakes\poster.png"
+      />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a
+          href="{{ url_for('finance_mistakes') }}"
+          class="card-title"
+           
+        >
+          10 Common Financial Mistakes to Avoid in Your 20s
+        </a>
+        <p class="card-description">
+          Your 20s are an exciting time filled with new experiences,
+          opportunities, and challenges. It's also a critical time for setting
+          yourself up for financial success in the years to come. Unfortunately,
+          many young adults make financial mistakes during this period that can
+          have long-term consequences....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a
+          href="{{ url_for('finance_mistakes') }}"
+          class="card-button"
+           
+        >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-item">
+    <div class="img-part">
+      <img src="\static\images\blog_img\Finance\invest_stock\poster.png" />
+    </div>
+    <div class="text-part">
+      <div class="text-part1">
+        <a
+          href="{{ url_for('invest_stock') }}"
+          class="card-title"
+           
+        >
+          Investing in the Stock Market: Tips for Beginners
+        </a>
+        <p class="card-description">
+          Investing in the stock market can be an excellent way to build wealth
+          and achieve your financial goals. However, for beginners, the world of
+          investing can seem daunting and complex. With so many options
+          available, it's easy to feel overwhelmed. In this beginner's guide,
+          we'll provide you....
+        </p>
+      </div>
+      <div class="text-part2">
+        <a
+          href="{{ url_for('invest_stock') }}"
+          class="card-button"
+           
+        >
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

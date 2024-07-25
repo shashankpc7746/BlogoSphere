@@ -1,0 +1,423 @@
+
+{% extends 'layout.html' %}
+{% block body %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flashmessage" id="flash_{{ category }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+        <meta http-equiv="refresh" content="5">
+      {% endif %}
+    {% endwith %}
+
+    <div class="website">
+      <div class="news">
+        <button class="button">Trending</button>
+        <marquee loop="">
+          ● Mind and Machine: Chronicles of AI Advancements 
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          ● The Enigmatic Lure of Black Holes: A Journey Through Space and Time
+        </marquee>
+      </div>
+
+      <main class="main">
+        <div class="text1">
+          <h3>
+            "Explore the Boundless World of Ideas and Insights. Dive into a
+            diverse array of thought-provoking articles, engaging stories, and
+            informative content curated to inspire, inform, and entertain. Join
+            our vibrant community of writers and readers as we navigate through
+            the ever-expanding universe of topics, from lifestyle and culture to
+            technology and beyond. Let Blogosphere be your gateway to discovery,
+            enlightenment, and connection in the digital realm of blogging."
+          </h3>
+        </div>
+        
+        <div class="content">
+
+          <!-- tech blog slider -->
+          <div class="slide_blogs">
+              <h1 class="servicesh1">Tech Trends of Tomorrow with Our Trending Blogs!</h1>
+              <div class="services">
+              <div class="wrapper" id="services">
+                  <button class="arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
+                  <button class="arrow next"><i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="card-wrapper">
+
+                      <div class="card-item">
+                        <img src="/static/images/blog_img/Tech/AI_realtiy/poster.png">
+                        <div class="card-info">
+                            <a href="{{url_for('ai_er')}}" class="card-title" target="_blank">
+                              Exploring Extended Reality (XR): The Next Frontier in Immersive Technology
+                            </a>
+                            <p class="card-description">In recent years, technological advancements have 
+                              propelled us into a world where reality is no longer confined to the physical 
+                              realm...
+                            </p>
+                        </div>
+                        <a href="{{ url_for('ai_er') }}" class="card-button" target="_blank"> View More </a>
+                      </div>
+
+
+                      <div class="card-item">
+                          <img src="\static\images\blog_img\Tech\AI_Mind\AI_poster.png" alt="image" class="card-img">
+                        <div class="card-info">
+                            <a href="{{ url_for('ai_m') }}" class="card-title" target="_blank">Mind and Machine: Chronicles of AI
+                              Advancements</a>
+                            <p class="card-description"> The dynamic intersection between human cognition and 
+                              technological innovation, delving into the evolution....
+                            </p>
+                        </div>
+                        <a href="{{ url_for('ai_m') }}" class="card-button"target="_blank"> View More </a>
+                      </div>
+
+                      <div class="card-item">
+                          <img src="/static/images/blog_img/Tech/AI_Healthcare/poster.png" >
+                          <div class="card-info">
+                              <a href="{{ url_for('ai_healthcare') }}" class="card-title" target="_blank">AI in Healthcare: Transforming Medicine with Intelligence</a>
+                              <p class="card-description"> Artificial Intelligence (AI) has emerged as a powerful force in
+                                revolutionizing various industries, and healthcare is no exception. The
+                                integration of...
+                              </p>
+                          </div>
+                          <a href="{{ url_for('ai_healthcare') }}" class="card-button" target="_blank"> View More </a>
+                      </div>
+
+                      <div class="card-item">
+                        <img src="/static/images/blog_img/Tech/AI_Drug/poster.png">
+                        <div class="card-info">
+                            <a href="{{ url_for('ai_drug') }}" class="card-title" target="_blank">AI in Drug Discovery: Accelerating Innovation
+                            </a>
+                            <p class="card-description">Artificial Intelligence (AI) has emerged as a game-changer in the field of
+                              drug discovery it's ability to process vast amounts of data, identify
+                              pattern....</p>
+                        </div>
+                        <a href="{{ url_for('ai_drug') }}" class="card-button" target="_blank"> View More </a>
+                      </div>
+
+
+                      <div class="card-item">
+                          <img src="/static/images/blog_img/Tech/AI_metaverse/meta_poster.jpeg">
+                          <div class="card-info">
+                              <a href="{{ url_for('ai_meta') }}" class="card-title">Navigating the New Frontier: The Metaverse</a>
+                              <p class="card-description">In the digital age, the concept of reality is evolving beyond our physical world. The Metaverse, a term coined from science fiction, is becoming...</p>
+                          </div>
+                          <a href="{{ url_for('ai_meta') }}" class="card-button" > View More </a>
+                      </div>
+              </div> 
+              </div>
+          </div>
+          
+          <!-- Advertisement_1 -->
+          <div class="box1">
+            <div id="bx1">
+              <a href="https://www.mcafee.com/consumer/en-in/landing-page/direct/sem/mcafee-antivirus-plus.html?csrc=bing&csrcl2=pla-shopping&cctype=desktop-brand&ccstype=&ccoe=direct&ccoel2=sem&pkg_id=512&affid=1492&ccstype=1year&utm_source=bing&utm_medium=paidsearch&utm_campaign=en-in:PLA:::::D:&utm_content=All+Products&utm_term=&&utm_source=bing-pla-c&utm_campaign=359209295&utm_content=&utm_term=pla-4586612756976096&gclid=ba82763804711cc800ab101fecbd04b7&gclsrc=3p.ds&msclkid=ba82763804711cc800ab101fecbd04b7&gclid=ba82763804711cc800ab101fecbd04b7&gclsrc=3p.ds" target="_blank">
+                <img src="/static/images/Advertise/mcafee.png" id="prop_box" alt="Advertisement_1" >
+              </a>
+            </div>
+            <div id="bx3">
+              <a href="https://www.apple.com/apple-vision-pro/" target="_blank">
+                <img src="/static/images/Advertise/Adv1.png" id="prop_box" alt="Advertisement_1" >
+              </a>
+            </div>
+          </div>
+          
+          <!-- Astronomy blogs -->
+          <div id="slide_blogs">
+            <div class="upper-box">
+              <h1 class="servicesh1">Astronomy 101: Your Trending Guide to the Universe</h1>
+              <div class="services">
+                <div class="wrapper" id="services">
+                    <button class="arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="arrow next"><i class="fa-solid fa-chevron-right"></i></button>
+                    <div class="card-wrapper">
+                        <div class="card-item">
+                            <img src="\static\images\blog_img\Astronomy\Aurora\aurora_poster.png" alt="image" class="card-img">
+                          <div class="card-info">
+                              <a href="{{ url_for('auroras') }}" class="card-title">The Science Behind the Northern Lights: Auroras</a>
+                              <p class="card-description"> One of the most breathtaking natural phenomena visible from Earth is
+                                the aurora, also known as the northern lights in the...
+                              </p>
+                          </div>
+                          <a href="{{ url_for('auroras') }}" class="card-button"> View More </a>
+                        </div>
+
+                        <div class="card-item">
+                          <img src="/static/images/blog_img/Astronomy/Mars/poster.png">
+                          <div class="card-info">
+                              <a href="{{url_for('mars')}}" class="card-title">Mars Exploration: The Quest for Life Beyond Earth</a>
+                              <p class="card-description">Mars, the red planet, has captivated the imagination of scientists and the
+                                public alike for centuries. As the most Earth-like planet...</p>
+                          </div>
+                          <a href="{{url_for('mars')}}" class="card-button"> View More </a>
+                        </div>
+
+                        <div class="card-item">
+                            <img src="static\images\blog_img\Astronomy\Blackhole\poster.png">
+                            <div class="card-info">
+                                <a href="{{ url_for('blackhole') }}" class="card-title">The Enigmatic Lure of Black Holes: A
+                                  Journey Through Space and Time
+                                </a>
+                                <p class="card-description">Black holes, the mysterious titans of the cosmos, have captivated the
+                                  human imagination for decades....</p>
+                            </div>
+                            <a href="{{ url_for('blackhole') }}" class="card-button"> View More </a>
+                        </div>
+
+                        <div class="card-item">
+                            <img src="/static/images/blog_img/Astronomy/Galaxy/galaxy_poster.png">
+                            <div class="card-info">
+                                <a href="{{url_for('galaxy')}}" class="card-title">The Fascinating World of Galaxies</a>
+                                <p class="card-description">In the vast expanse of the universe, galaxies are the building blocks of the
+                                  cosmos. These immense collections of stars, gas, and dust come in a...</p>
+                            </div>
+                            <a href="{{url_for('galaxy')}}" class="card-button"> View More </a>
+                        </div>
+
+                        <div class="card-item">
+                            <img src="/static/images/blog_img/Astronomy/Comets/comets_poster.png">
+                            <div class="card-info">
+                                <a href="{{url_for('comets')}}" class="card-title">The Impact of Asteroids and Comets on Earth</a>
+                                <p class="card-description">Throughout Earth's history, our planet has been bombarded by asteroids and
+                                  comets from the depths of space. These cosmic collisions have...</p>
+                            </div>
+                            <a href="{{url_for('comets')}}" class="card-button"> View More </a>
+                        </div>
+                    </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+          <!-- Finance -->
+          <div id="slide_blogs">
+            <div class="upper-box">
+              <h1 class="servicesh1">Money Matters: Insights for Financial Wellness</h1>
+              <div class="services">
+              <div class="wrapper" id="services">
+                  <button class="arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
+                  <button class="arrow next"><i class="fa-solid fa-chevron-right"></i></button>
+                  <div class="card-wrapper">
+
+                      <div class="card-item">
+                          <img src="\static\images\blog_img\Finance\relation_finance\poster.png" alt="image" class="card-img">
+                        <div class="card-info">
+                            <a href="{{ url_for('relation_finance') }}" class="card-title">The Psychology of Money: Understanding Your Relationship with Finance</a>
+                            <p class="card-description"> Our relationship with money is complex and deeply influenced by our emotions,
+                              experiences, and upbringing....
+                            </p>
+                        </div>
+                        <a href="{{ url_for('relation_finance') }}" class="card-button"> View More </a>
+                      </div>
+
+                      <div class="card-item">
+                          <img src="\static\images\blog_img\Finance\personal_budget\budget_poster.png">
+                          <div class="card-info">
+                              <a href="{{ url_for('personal_budget') }}" class="card-title">The Ultimate Guide to Creating a Personal Budget
+                              </a>
+                              <p class="card-description">Creating a personal budget is one of the most crucial steps you can take
+                                toward achieving financial stability and success....</p>
+                          </div>
+                          <a href="{{ url_for('personal_budget') }}" class="card-button"> View More </a>
+                      </div>
+
+                      <div class="card-item">
+                          <img src="\static\images\blog_img\Finance\investment\poster.png">
+                          <div class="card-info">
+                            <a href="{{ url_for('investment') }}" class="card-title">Understanding Different Types of Investments: A Beginner's Guide
+                            </a>
+                            <p class="card-description">Investing is an essential part of building wealth and achieving financial
+                              goals. However, for beginners, the world of investments can....</p>
+                        </div>
+                        <a href="{{ url_for('investment') }}" class="card-button"> View More </a>
+                      </div>
+
+                      <div class="card-item">
+                        <img src="\static\images\blog_img\Finance\save_money\saving_poster.png">
+                        <div class="card-info">
+                          <a href="{{ url_for('save_money') }}" class="card-title">How to Save Money Effectively: Tips and Tricks
+                          </a>
+                          <p class="card-description">Saving money is an essential part of achieving financial stability and
+                            reaching your long-term financial goals...</p>
+                        </div>
+                        <a href="{{ url_for('save_money') }}" class="card-button"> View More </a>
+                      </div>
+
+                      <div class="card-item">
+                          <img src="\static\images\blog_img\Finance\rent_home\rent_poster.png">
+                          <div class="card-info">
+                            <a href="{{ url_for('rent_home') }}" class="card-title">The Pros and Cons of Renting vs. Buying a Home
+                            </a>
+                            <p class="card-description"> Deciding whether to rent or buy a home is one of the biggest financial
+                              decisions you'll ever make. Both options have their....</p>
+                          </div>
+                          <a href="{{ url_for('rent_home') }}" class="card-button"> View More </a>
+                        </div>
+
+                  </div>
+              </div> 
+              </div>
+            </div>
+          </div> 
+
+          <!-- Sports -->
+          <div id="slide_blogs">
+            <div class="upper-box">
+              <h1 class="servicesh1">Game On: Exploring the World of Sports</h1>
+              <div class="services">
+              <div class="wrapper" id="services">
+                  <button class="arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
+                  <button class="arrow next"><i class="fa-solid fa-chevron-right"></i></button>
+                  <div class="card-wrapper">
+
+                      <div class="card-item">
+                          <img src="\static\images\blog_img\Sports\cricket_india\poster.png" alt="image" class="card-img">
+                        <div class="card-info">
+                            <a href="{{ url_for('cricket_india') }}" class="card-title">The Evolution of Cricket in India: From Colonial Pastime to National Obsession</a>
+                            <p class="card-description"> Cricket is more than just a sport in India; it's a religion. The journey of
+                              cricket in India, from being a colonial pastime to....
+                            </p>
+                        </div>
+                        <a href="{{ url_for('cricket_india') }}" class="card-button"> View More </a>
+                      </div>
+
+                      <div class="card-item">
+                          <img src="\static\images\blog_img\Sports\esports\poster.png">
+                          <div class="card-info">
+                              <a href="{{ url_for('esports') }}" class="card-title">The Rise of Esports: Exploring the World of Competitive Gaming
+                              </a>
+                              <p class="card-description">In recent years, esports has emerged as one of the fastest-growing industries
+                                in the world, captivating millions of fans and generating billions....</p>
+                          </div>
+                               <a href="{{ url_for('esports') }}" class="card-button"> View More </a>
+                      </div>
+
+                      <div class="card-item">
+                          <img src="\static\images\blog_img\Sports\iconic_moment\poster.png">
+                          <div class="card-info">
+                              <a href="{{ url_for('iconic_moment') }}" class="card-title">Top 10 Iconic Moments in Indian Sports History
+                              </a>
+                              <p class="card-description">India has a rich and storied sports history, marked by countless moments of
+                                triumph, glory, and inspiration.....</p>
+                          </div>
+                             <a href="{{ url_for('iconic_moment') }}" class="card-button"> View More </a>
+                      </div>
+
+                      <div class="card-item">
+                        <img src="\static\images\blog_img\Sports\new_technology\tech_poster.png">
+                        <div class="card-info">
+                            <a href="{{ url_for('new_technology') }}" class="card-title">How Technology is Changing the Way We Play and Watch Sports
+                            </a>
+                            <p class="card-description">Technology has transformed almost every aspect of our lives, and sports are no
+                              exception. From player performance ....</p>
+                        </div>
+                           <a href="{{ url_for('new_technology') }}" class="card-button"> View More </a>
+                      </div>
+
+                    <div class="card-item">
+                      <img src="\static\images\blog_img\Sports\indian_games\poster.png">
+                      <div class="card-info">
+                          <a href="{{ url_for('indian_games') }}" class="card-title">Exploring Traditional Indian Sports: From Kho Kho to Mallakhamb
+                          </a>
+                          <p class="card-description">India has a rich and diverse sporting heritage that stretches back thousands
+                            of years. While cricket may be the most popular sport....</p>
+                          </div>
+                             <a href="{{ url_for('indian_games') }}" class="card-button"> View More </a>
+                      </div>
+                  </div>
+              </div> 
+              </div>
+            </div>
+          </div> 
+
+          <!-- Food -->
+          <div id="slide_blogs">
+            <div class="upper-box">
+              <h1 class="servicesh1">Feast Your Senses: Explore the Latest in Food Trends </h1>
+              <div class="services">
+              <div class="wrapper" id="services">
+                  <button class="arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
+                  <button class="arrow next"><i class="fa-solid fa-chevron-right"></i></button>
+                  <div class="card-wrapper">
+
+                      <div class="card-item">
+                          <img src="/static/images/blog_img/Food/Vegan/poster.png" alt="image" class="card-img">
+                        <div class="card-info">
+                            <a href="{{ url_for('vegan') }}" class="card-title">
+                              The Rise of Plant-Based Cuisine: Navigating the Vegan Revolution
+                            </a>
+                            <p class="card-description"> 
+                              In recent years, there has been a significant shift in the way people approach 
+                              their diets, with plant-based cuisine....
+                            </p>
+                        </div>
+                        <a href="{{ url_for('vegan') }}" class="card-button"> View More </a>
+                      </div>
+
+                      <div class="card-item">
+                          <img src="/static/images/blog_img/Food/ftof/poster.png">
+                          <div class="card-info">
+                              <a href="{{ url_for('ftof') }}" class="card-title">
+                                From Farm to Fork: Exploring Sustainable Food Practices
+                              </a>
+                              <p class="card-description">
+                                In recent years, the concept of sustainability has become increasingly important 
+                                in various aspects of our lives, including food production ....
+                              </p>
+                          </div>
+                          <a href="{{ url_for('ftof') }}" class="card-button"> View More </a>
+                      </div>
+                      
+                      <div class="card-item">
+                          <img src="/static/images/blog_img/Food/Culinary/poster.png">
+                          <div class="card-info">
+                              <a href="{{ url_for('culinary') }}" class="card-title">
+                                Culinary Adventures: Exploring Global Food Trends
+                              </a>
+                              <p class="card-description">
+                                In a world where cultures intertwine and borders blur, culinary exploration has 
+                                become a journey that transcends geograp....
+                              </p>
+                          </div>
+                          <a href="{{ url_for('culinary') }}" class="card-button"> View More </a>
+                      </div>
+
+                      <div class="card-item">
+                          <img src="/static/images/blog_img/Food/Innovation/poster.jpeg">
+                          <div class="card-info">
+                              <a href="{{ url_for('innovation') }}" class="card-title">
+                                Food Tech Innovations: Revolutionizing the Way We Eat
+                              </a>
+                              <p class="card-description">
+                                Innovation is a cornerstone of human progress, and nowhere is this more evident 
+                                than in the realm of food techn....
+                              </p>
+                          </div>
+                          <a href="{{ url_for('innovation') }}" class="card-button"> View More </a>
+                      </div>
+
+                      <div class="card-item">
+                          <img src="/static/images/blog_img/Food/Habits/poster.jpeg">
+                          <div class="card-info">
+                              <a href="{{ url_for('habits') }}" class="card-title">
+                                Food for Thought: The Psychology Behind Eating Habits
+                              </a>
+                              <p class="card-description">
+                                Eating is a fundamental aspect of human life, influenced not only by biological 
+                                needs but also by psychological factors. Our eating habits are....                             </p>
+                          </div>
+                          <a href="{{ url_for('habits') }}" class="card-button"> View More </a>
+                      </div>
+                  </div>
+              </div> 
+              </div>
+            </div>
+          </div>
+            
+        </div>
+      </main>
+    </div>
+{% endblock %}

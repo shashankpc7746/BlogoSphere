@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blogosphere | Levaze</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='xy.css') }}" />
+    <link rel="icon" href="/static/images/globefav.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+  </head>
+  <body>
+    <div class="loader">
+      <h3>Welcome</h3>
+      <h3>to</h3>
+      <h3>BlogoSphere</h3>
+      <h3>👋</h3>
+    </div>
+    <div class="main">
+      <div class="page1">
+        <div class="cursor">
+          <!-- <h3></h3> -->
+        </div>
+        <div class="cover"></div>
+        <video
+          autoplay
+          loop
+          muted
+          src="https://videos.pexels.com/video-files/1448735/1448735-hd_1366_720_24fps.mp4"
+        ></video>
+        <div class="page1-content">
+          <nav>
+            <h2>The Levaze Product.</h2>
+            <button
+              type="button"
+              class="btn btn-outline-light btn-lg"
+              id="page1-btn"
+              onclick="location.href='{{ url_for('home') }}'"
+            >
+              <a href="{{ url_for('home') }}">Get Started</a>
+            </button>
+          </nav>
+          <h1>
+            <span>B</span><span>l</span><span>o</span><span>g</span
+            ><span>o</span><span>S</span><span>p</span><span>h</span
+            ><span>e</span><span>r</span><span>e</span>
+          </h1>
+        </div>
+      </div>
+      <div class="page2">
+        <div class="page-content">
+          <div class="page-upside-content">
+            <p>
+              <b>Share Your Story.<br />Discover Your Voice, Share Stories.</b>
+            </p>
+            <p><b>Blogosphere: "Your Blog, Our Support."</b></p>
+          </div>
+          <div class="hr-line">
+            <div class="page-hr-line"></div>
+          </div>
+          <div class="page-downside-content">
+            <h3>
+              "Explore the Boundless World of Ideas and Insights. Dive into a
+              diverse array of thought-provoking articles, engaging stories, and
+              informative content curated to inspire, inform, and entertain.
+              Join our vibrant community of writers and readers as we navigate
+              through the ever-expanding universe of topics, from lifestyle and
+              culture to technology and beyond. Let Blogosphere be your gateway
+              to discovery, enlightenment, and connection in the digital realm
+              of blogging."
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="page3">
+        <div class="page3-top">
+          <h4>Details about <span>BlogoSphere</span> website</h4>
+          <h2>Explore the World</h2>
+          <h2>Through Blogs</h2>
+        </div>
+        <h3 class="video_title">Topics mostly users like...</h3>
+        <div class="page3-elements">
+          <div class="box" id="box1">
+            <img
+              src="https://images.pexels.com/photos/34514/spot-runs-start-la.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="sports"
+            />
+            <video
+              muted
+              autoplay
+              loop
+              src="https://videos.pexels.com/video-files/2657261/2657261-uhd_3840_2160_24fps.mp4"
+            ></video>
+            <div class="tags">SPORTS</div>
+          </div>
+          <div class="box" id="box2">
+            <img
+              src="https://images.pexels.com/photos/8294551/pexels-photo-8294551.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="ai"
+            />
+            <video
+              muted
+              autoplay
+              loop
+              src="https://videos.pexels.com/video-files/8501993/8501993-uhd_2160_3840_25fps.mp4"
+            ></video>
+            <div class="tags">TECHNOLOGY</div>
+          </div>
+          <div class="box" id="box3">
+            <img
+              src="https://images.pexels.com/photos/433333/pexels-photo-433333.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="education"
+            />
+            <video
+              muted
+              autoplay
+              loop
+              src="https://videos.pexels.com/video-files/1422633/1422633-hd_1920_810_24fps.mp4"
+            ></video>
+            <div class="tags">EDUCATION</div>
+          </div>
+        </div>
+
+        <div class="page3-bottom">
+          <div class="circle">
+            <video
+              muted
+              autoplay
+              loop
+              src="https://www.rejouice.com/assets/videos/RJ-BALL-BLUE-ORANGE-scaled.webm"
+            ></video>
+          </div>
+          <div class="page3-subscriber">
+            <h3>{{ count }} Subscribers</h3>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="page4">
+          <div class="info">
+            <div class="group1">
+              <h1>Did you subscribed ?</h1>
+              <h3>Let's get started!</h3>
+            </div>
+            <button onclick="location.href='{{ url_for('home')}}'">
+              Main Page
+            </button>
+          </div>
+          <div class="mainfooter">
+            <div class="foot1">
+              <div class="contact">
+                <h2>Blog0spheré🌐</h2>
+                <p><b>Group 9</b><br />Shashank<br />Yash<br />Diti</p>
+                <p>📍Mumbai, India</p>
+                <p>
+                  <a href="mailto:blogosphere009@gmail.com">
+                    📧blogosphere009@gmail.com
+                    </a>
+                </p>
+                <p>☎️+91 7977305279 /+91 8691907200</p>
+              </div>
+              <div class="quick-links">
+                <div class="QL">
+                  <h2>Quick Links</h2>
+                </div>
+                <div class="elements">
+                  <div id="ele1">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about_us') }}">About Us</a></li>
+                    <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+    
+                  </div>
+                  <div id="ele2">
+                    <li>
+                         Categories
+                        <li><a href="{{url_for('technology')}}">> Technology</a></li>
+                        <li><a href="{{url_for('astronomy')}}">> Astronomy</a></li>
+                        <li><a href="{{url_for('finance')}}">> Finance</a></li>
+                        <li><a href="{{url_for('sports')}}">> Sports</a></li>
+                        <li><a href="{{url_for('foods')}}">> Food</a></li>
+                    </li>
+                  </div>
+                </div>
+              </div>
+              <div class="newsletter">
+                <form action="/subscribe" method="POST" id="form_nw">
+                  <h2 id="radius_nw">Subcribe Now</h2>
+                  <br />
+                  <input
+                    id="radius_nw"
+                    type="text"
+                    placeholder="Your Name"
+                    name = "name"
+                    required
+                  /><br /><br />
+                  <input
+                    id="radius_nw"
+                    type="email"
+                    placeholder="Your Email"
+                    name = "email"
+                    required
+                  /><br /><br />
+                  <button id="radius_nw">Subscribe
+
+                  </button>
+                </form>
+                <div class="Social">
+                  <a href="https://www.instagram.com/levaze_digital?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                    <svg
+                      height="40px"
+                      width="40px"
+                      version="1.1"
+                      id="insta"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 551.034 551.034"
+                      xml:space="preserve"
+                      fill="#000000"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      
+                      <g id="SVGRepo_iconCarrier">
+                        <g id="XMLID_13_">
+                          <linearGradient
+                            id="XMLID_2_"
+                            gradientUnits="userSpaceOnUse"
+                            x1="275.517"
+                            y1="4.5714"
+                            x2="275.517"
+                            y2="549.7202"
+                            gradientTransform="matrix(1 0 0 -1 0 554)"
+                          >
+                            <stop offset="0" style="stop-color: #e09b3d"></stop>
+                            <stop offset="0.3" style="stop-color: #c74c4d"></stop>
+                            <stop offset="0.6" style="stop-color: #c21975"></stop>
+                            <stop offset="1" style="stop-color: #7024c4"></stop>
+                          </linearGradient>
+                          <path
+                            id="XMLID_17_"
+                            style="fill: url(#XMLID_2_)"
+                            d="M386.878,0H164.156C73.64,0,0,73.64,0,164.156v222.722 c0,90.516,73.64,164.156,164.156,164.156h222.722c90.516,0,164.156-73.64,164.156-164.156V164.156 C551.033,73.64,477.393,0,386.878,0z M495.6,386.878c0,60.045-48.677,108.722-108.722,108.722H164.156 
+                                    c-60.045,0-108.722-48.677-108.722-108.722V164.156c0-60.046,48.677-108.722,108.722-108.722h222.722 c60.045,0,108.722,
+                                    48.676,108.722,108.722L495.6,386.878L495.6,386.878z"
+                          ></path>
+                          <linearGradient
+                            id="XMLID_3_"
+                            gradientUnits="userSpaceOnUse"
+                            x1="275.517"
+                            y1="4.5714"
+                            x2="275.517"
+                            y2="549.7202"
+                            gradientTransform="matrix(1 0 0 -1 0 554)"
+                          >
+                            <stop offset="0" style="stop-color: #e09b3d"></stop>
+                            <stop offset="0.3" style="stop-color: #c74c4d"></stop>
+                            <stop offset="0.6" style="stop-color: #c21975"></stop>
+                            <stop offset="1" style="stop-color: #7024c4"></stop>
+                          </linearGradient>
+                          <path
+                            id="XMLID_81_"
+                            style="fill: url(#XMLID_3_)"
+                            d="M275.517,133C196.933,133,133,196.933,133,275.516 s63.933,142.517,142.517,142.517S418.034,354.1,418.034,275.516S354.101,133,275.517,133z M275.517,362.6 
+                                    c-48.095,0-87.083-38.988-87.083-87.083s38.989-87.083,87.083-87.083c48.095,0,87.083,38.988,87.083,87.083 
+                                    C362.6,323.611,323.611,362.6,275.517,362.6z"
+                          ></path>
+                          <linearGradient
+                            id="XMLID_4_"
+                            gradientUnits="userSpaceOnUse"
+                            x1="418.306"
+                            y1="4.5714"
+                            x2="418.306"
+                            y2="549.7202"
+                            gradientTransform="matrix(1 0 0 -1 0 554)"
+                          >
+                            <stop offset="0" style="stop-color: #e09b3d"></stop>
+                            <stop offset="0.3" style="stop-color: #c74c4d"></stop>
+                            <stop offset="0.6" style="stop-color: #c21975"></stop>
+                            <stop offset="1" style="stop-color: #7024c4"></stop>
+                          </linearGradient>
+                          <circle
+                            id="XMLID_83_"
+                            style="fill: url(#XMLID_4_)"
+                            cx="418.306"
+                            cy="134.072"
+                            r="34.149"
+                          ></circle>
+                        </g>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="#" >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                      height="40px"
+                      width="40px"
+                      id="twitter"
+                    >
+                      <path
+                        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                      />
+                    </svg>
+                  </a>
+                  <a href="https://www.linkedin.com/company/levaze-digital/" target="_blank">
+                    <svg
+                      height="40px"
+                      width="40px"
+                      version="1.1"
+                      id="Linkedin"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="-38.2 -38.2 458.40 458.40"
+                      xml:space="preserve"
+                      fill="#000000"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          style="fill: #0077b7"
+                          d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889 C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056 H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806 c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1 s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73 c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079 c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426 c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472 L341.91,330.654L341.91,330.654z"
+                        ></path>
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="policies">
+              <div class="part1">
+                <h1>English Edition</h1>
+                <h1>Privacy</h1>
+                <h1>Cookies</h1>
+              </div>
+              <div class="part2">
+                <h1>©2024 BlogOSphere(‾◡◝). Designed and Developed by Group 9</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="{{ url_for('static',filename='ab.js') }}"></script>
+  </body>
+</html>
