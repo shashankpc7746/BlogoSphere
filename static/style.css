@@ -75,6 +75,11 @@ p {
   margin: 0 auto;
   margin-top: 5%;
 }
+#flash_warning {
+  background-color: rgba(255, 193, 7, 0.79);
+  margin: 0 auto;
+  margin-top: 5%;
+}
 #flash_notfound {
   background-color: rgba(220, 20, 60, 0.586);
   margin: 0 auto;
