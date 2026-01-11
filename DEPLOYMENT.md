@@ -64,10 +64,12 @@ Fill in these settings:
 Click **"Advanced"** and add these environment variables:
 
 1. **SECRET_KEY** (Required)
+
    - **Key**: `SECRET_KEY`
    - **Value**: `BlogoSphere2024SecureKey!` (or any random string)
 
 2. **SENDER_EMAIL** (Required for subscribe feature)
+
    - **Key**: `SENDER_EMAIL`
    - **Value**: `your-gmail@gmail.com`
 
@@ -76,6 +78,7 @@ Click **"Advanced"** and add these environment variables:
    - **Value**: Your Gmail App Password (see below)
 
 **Getting Gmail App Password:**
+
 1. Go to [Google Account Settings](https://myaccount.google.com/security)
 2. Enable **2-Step Verification**
 3. Go to **App Passwords**
@@ -168,6 +171,7 @@ In Render dashboard, you can:
 ### 1. **Custom Domain** (Yes, Render supports it!)
 
 **On Free Tier:**
+
 1. Go to your service's **Settings** tab
 2. Scroll to **Custom Domain**
 3. Click **"Add Custom Domain"**
@@ -180,19 +184,23 @@ In Render dashboard, you can:
 7. SSL certificate is **automatically provided**!
 
 **Popular Domain Providers:**
+
 - Namecheap, GoDaddy, Google Domains, Cloudflare
 
 ### 2. **Update Workflow**
 
 **For Code Changes (HTML/CSS/Python):**
+
 ```bash
 git add .
 git commit -m "Updated feature"
 git push origin main
 ```
+
 Render auto-deploys in 1-2 minutes! ✨
 
 **For Dependency Changes:**
+
 ```bash
 pip install new-package
 pip freeze > requirements.txt
@@ -201,6 +209,7 @@ git commit -m "Added new package"
 git push origin main
 # Then: "Clear build cache & deploy" in Render
 ```
+
 2. **SSL Certificate**: Automatically provided by Render
 3. **Upgrade Database**: Switch to PostgreSQL for production
 4. **Environment Variables**: Store sensitive data securely

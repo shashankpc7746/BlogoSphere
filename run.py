@@ -73,7 +73,8 @@ def send_email_to_subscriber(name, email, password):
     msg['Subject'] = 'Thanks for Subscribing ❤'
     msg['From'] = sender_email
     msg['To'] = email
-    server = smtplib.SMTP('smtp.gmail.com', 587)
+    # Add timeout to prevent hanging (Render may block SMTP)
+    server = smtplib.SMTP('smtp.gmail.com', 587, timeout=10)
     server.starttls()
     server.login(sender_email, sender_password)
     server.sendmail(sender_email, email, msg.as_string())
@@ -398,7 +399,8 @@ def send_email(name, email, otp):
     msg['Subject'] = 'Admin Panel Access'
     msg['From'] = sender_email
     msg['To'] = email
-    server = smtplib.SMTP('smtp.gmail.com', 587)
+    # Add timeout to prevent hanging (Render may block SMTP)
+    server = smtplib.SMTP('smtp.gmail.com', 587, timeout=10)
     server.starttls()
     server.login(sender_email, sender_password)
     server.sendmail(sender_email, email, msg.as_string())
