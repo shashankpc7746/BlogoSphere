@@ -1,0 +1,10 @@
+{
+    "css.lint.compatibleVendorPrefixes": "ignore",
+    "css.lint.vendorPrefix": "ignore",
+    "css.validate": true,
+    "css.lint.unknownProperties": "ignore",
+    "edgeDevTools.browserFlavor": "Default",
+    "edgeDevTools.webhint": false,
+    "edgeDevTools.enableNetworkInspection": false,
+    "vscode-edge-devtools.webhint": false
+}

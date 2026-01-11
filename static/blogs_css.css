@@ -81,7 +81,6 @@
   padding: 0.5rem;
   color: var(--para-color);
   text-align: justify;
-  text-justify: inter-word;
 }
 #img_poster {
   display: flex;
@@ -231,7 +230,6 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     padding-top: 0rem;
-    text-justify: inter-word;
     text-align: justify;
   }
   .text-part2 a {
@@ -361,7 +359,6 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     padding-top: 0rem;
-    text-justify: inter-word;
     text-align: justify;
   }
   .text-part2 a {
