@@ -36,10 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Check for theme preference in localStorage
   const currentTheme = localStorage.getItem("theme");
-  if (currentTheme === "dark") {
-    // Set checkbox state and apply dark theme
+  if (currentTheme === "dark" || !currentTheme) {
+    // Set dark theme as default if no preference exists, or if dark theme is preferred
     themeToggleInput.checked = true;
     body.classList.add("dark-theme");
+    if (!currentTheme) {
+      localStorage.setItem("theme", "dark");
+    }
   }
 
   // Add event listener to theme toggle input

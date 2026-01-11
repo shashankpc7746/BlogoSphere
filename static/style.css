@@ -3,6 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Style for the scrollbar */
 ::-webkit-scrollbar {
   width: 10px; /* Width of the vertical scrollbar */
@@ -511,11 +524,9 @@ marquee {
 footer {
   padding-top: 2vw;
   background-color: #474747;
-}
-
-footer {
   margin: 0%;
 }
+
 .mainfooter {
   background-color: var(--nav-bg-color);
   max-width: 100%;
@@ -540,16 +551,21 @@ footer {
   flex-direction: column;
   align-items: left;
   padding: 1rem;
+  animation: fadeInUp 0.5s ease-out;
 }
 .quick-links li {
   list-style: none;
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
+  transition: transform 0.3s ease;
 }
-
+.quick-links li:hover {
+  transform: translateX(5px);
+}
 .quick-links li a {
   text-decoration: none;
   color: #c0d4c9;
+  transition: color 0.3s ease;
 }
 .quick-links li a:hover {
   color: #0ee6e6;
@@ -584,9 +600,14 @@ h2 {
   width: 33.33%;
   padding: 1rem;
   margin-left: 8rem;
+  animation: fadeInUp 0.6s ease-out;
 }
 .contact p {
   color: #c0d4c9;
+  transition: color 0.3s ease;
+}
+.contact p:hover {
+  color: #0ee6e6;
 }
 .contact h2 {
   font-size: 2rem;
@@ -594,6 +615,10 @@ h2 {
 }
 .contact a {
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+.contact a:hover {
+  color: #0ee6e6;
 }
 
 /* Newsletter and Subcribtion section*/
@@ -605,12 +630,19 @@ h2 {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  animation: fadeInUp 0.7s ease-out;
 }
 .newsletter input {
   height: 1.5rem;
   border: none;
   padding: 0.4rem;
   border-radius: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.newsletter input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(14, 230, 230, 0.3);
+  outline: none;
 }
 .newsletter button {
   height: 1.5rem;
@@ -621,6 +653,14 @@ h2 {
   border-radius: 2rem;
   cursor: pointer;
   background-color: rgb(247, 222, 174);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.newsletter button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.newsletter button:active {
+  transform: translateY(0);
 }
 .Social {
   background-color: #474747;
@@ -631,6 +671,11 @@ h2 {
 }
 .Social a {
   margin-left: 1vw;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.Social a:hover {
+  transform: translateY(-3px) scale(1.1);
+  filter: brightness(1.2);
 }
 
 .mainfooter p {
@@ -672,6 +717,11 @@ hr {
 .part1 h1 {
   font-size: 1rem;
   margin-right: 4vw;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.part1 h1:hover {
+  color: #0ee6e6;
+  transform: translateY(-2px);
 }
 .part2 {
   height: 3vh;
