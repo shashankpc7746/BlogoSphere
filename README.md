@@ -5,6 +5,7 @@ A modern, feature-rich blogging platform built with Flask that combines curated 
 ## ✨ Features
 
 ### 🎯 Core Functionality
+
 - **User Subscription System** - Email-based registration with auto-generated passwords
 - **Blog Publishing** - Users can submit blogs with images and rich content
 - **Search Functionality** - Find blogs by title or keywords
@@ -12,6 +13,7 @@ A modern, feature-rich blogging platform built with Flask that combines curated 
 - **Admin Panel** - Secure OTP-based authentication for content moderation
 
 ### 📚 Content Categories
+
 - **Technology** - AI, Quantum Computing, Healthcare Tech, Voice Technology
 - **Astronomy** - Black Holes, Exoplanets, Mars, Galaxies, Comets, Auroras
 - **Business & Finance** - Investment, Budgeting, Financial Planning
@@ -19,6 +21,7 @@ A modern, feature-rich blogging platform built with Flask that combines curated 
 - **Food** - Vegan Cuisine, Culinary Arts, Food Photography, Innovations
 
 ### 🔐 Security Features
+
 - Session-based authentication
 - OTP verification for admin access
 - Password auto-generation and email delivery
@@ -26,6 +29,7 @@ A modern, feature-rich blogging platform built with Flask that combines curated 
 - Image validation (PNG, JPG, JPEG only)
 
 ### 🎨 User Experience
+
 - Dark/Light theme toggle
 - Responsive card-based design
 - Smooth scroll animations
@@ -38,7 +42,7 @@ A modern, feature-rich blogging platform built with Flask that combines curated 
 - **Database**: SQLite with SQLAlchemy ORM
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Email**: SMTP integration for notifications
-- **Libraries**: 
+- **Libraries**:
   - Swiper.js for carousels
   - Locomotive Scroll for smooth scrolling
   - Font Awesome for icons
@@ -52,17 +56,20 @@ A modern, feature-rich blogging platform built with Flask that combines curated 
 ## 🚀 Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/shashankpc7746/BlogoSphere.git
    cd BlogoSphere
    ```
 
 2. **Create virtual environment**
+
    ```bash
    python -m venv .venv
    ```
 
 3. **Activate virtual environment**
+
    - Windows:
      ```bash
      .venv\Scripts\activate
@@ -73,11 +80,13 @@ A modern, feature-rich blogging platform built with Flask that combines curated 
      ```
 
 4. **Install dependencies**
+
    ```bash
    pip install flask flask-sqlalchemy
    ```
 
 5. **Run the application**
+
    ```bash
    python run.py
    ```
@@ -109,11 +118,14 @@ BlogoSphere/
 ## 🗄️ Database Schema
 
 ### Tables
+
 1. **blogosphere_subscribers**
+
    - User registration and authentication
    - Fields: id, name, email, password, verified, date
 
 2. **blogosphere_blogs**
+
    - User-submitted blog content
    - Fields: id, name, email, title, content, date
 
@@ -124,7 +136,9 @@ BlogoSphere/
 ## 🔑 Configuration
 
 ### Email Setup
+
 Update SMTP credentials in `run.py`:
+
 ```python
 server.login('your-email@gmail.com', 'your-app-password')
 ```
@@ -132,7 +146,9 @@ server.login('your-email@gmail.com', 'your-app-password')
 **Note**: Use Gmail App Password for better security
 
 ### Admin Credentials
+
 Default admin users (modify in `run.py`):
+
 - Names: yash, shashank, diti
 - Emails: Configured in admin login route
 - Password: group9 (change in production!)
@@ -140,6 +156,7 @@ Default admin users (modify in `run.py`):
 ## 📖 Usage
 
 ### For Users
+
 1. **Subscribe** - Enter name and email on homepage
 2. **Receive Password** - Check email for auto-generated password
 3. **Browse Blogs** - Explore pre-written and user-submitted content
@@ -147,6 +164,7 @@ Default admin users (modify in `run.py`):
 5. **Upload Image** - Include cover image with your blog
 
 ### For Admins
+
 1. Navigate to admin panel URL
 2. Enter admin credentials
 3. Verify OTP sent to email
@@ -156,7 +174,9 @@ Default admin users (modify in `run.py`):
 ## 🎨 Customization
 
 ### Theme Colors
+
 Modify theme colors in `static/style.css`:
+
 ```css
 :root {
   --primary-color: #your-color;
@@ -165,7 +185,9 @@ Modify theme colors in `static/style.css`:
 ```
 
 ### Categories
+
 Add new categories by:
+
 1. Creating route in `run.py`
 2. Adding template in `templates/Category/`
 3. Updating navigation in `layout.html`
@@ -194,8 +216,9 @@ Add new categories by:
 ## 👥 Team
 
 **Group 9**
+
 - Shashank
-- Yash  
+- Yash
 - Diti
 
 ## 📧 Contact
@@ -218,4 +241,4 @@ This project is open source and available for educational purposes.
 
 **Made with ❤️ by Group 9**
 
-*Last Updated: January 11, 2026*
+_Last Updated: January 11, 2026_
