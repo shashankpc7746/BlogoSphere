@@ -9,7 +9,7 @@ import random
 # Flask(__name__) creates a Flask application instance
 app = Flask(__name__)
 
-app.secret_key = os.urandom(20)
+app.secret_key = os.environ.get('SECRET_KEY', os.urandom(20))
 # specifies the database URL.
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///Blogosphere.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -607,4 +607,5 @@ if __name__ == "__main__":
   # This line initializes the database by creating all the tables defined by the SQLAlchemy models and ensures that all the tables are created before the application starts 
   db.create_all()
   # This line starts the Flask server
-  app.run(debug=True)
+  port = int(os.environ.get('PORT', 5000))
+  app.run(host='0.0.0.0', port=port, debug=False)
