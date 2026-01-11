@@ -48,18 +48,21 @@ A production-ready blogging platform that combines curated content with user-gen
 ## 🛠️ Tech Stack
 
 ### Backend
+
 - **Flask 3.1.0** - Python web framework
 - **Flask-SQLAlchemy 3.1.1** - ORM for database operations
 - **SQLite** - Development database
 - **SendGrid API** - Email delivery service (100 emails/day free)
 
 ### Frontend
+
 - **HTML5, CSS3, JavaScript** - Core web technologies
 - **Swiper.js** - Touch-enabled carousels
 - **Locomotive Scroll** - Smooth scrolling animations
 - **Font Awesome** - Icon library
 
 ### Deployment & Infrastructure
+
 - **Render.com** - Cloud hosting platform (Free tier)
 - **Gunicorn 23.0.0** - Production WSGI server
 - **Namecheap** - Domain registration (.me domain via GitHub Student Pack)
@@ -67,6 +70,7 @@ A production-ready blogging platform that combines curated content with user-gen
 - **Git/GitHub** - Version control
 
 ### Development Tools
+
 - **Python 3.13** - Production runtime
 - **Virtual Environment** - Dependency isolation
 - **GitHub Actions Ready** - CI/CD integration support
@@ -114,6 +118,7 @@ A production-ready blogging platform that combines curated content with user-gen
 5. **Set up environment variables** (Optional for local development)
 
    Create a `.env` file:
+
    ```env
    SECRET_KEY=your-secret-key-here
    SENDGRID_API_KEY=your-sendgrid-api-key
@@ -206,7 +211,7 @@ Default admin users (configured in `run.py`):
 
 - **Names:** yash, shashank, diti
 - **Emails:** Configured in admin login route
-- **Password:** group9 *(Change in production!)*
+- **Password:** group9 _(Change in production!)_
 
 ### Security Best Practices
 
@@ -318,6 +323,7 @@ This project was developed as part of our web development coursework and is depl
 - **Let's Encrypt** - Free SSL certificates
 
 Special thanks to:
+
 - Flask community for excellent documentation
 - Render.com support team
 - SendGrid developer resources
@@ -342,7 +348,7 @@ This project is open source and available for educational purposes.
 
 **Made with ❤️ by Group 9**
 
-*"Blogging made simple, deployment made easy."*
+_"Blogging made simple, deployment made easy."_
 
 **Last Updated:** January 11, 2026  
 **Version:** 2.0.0 (Production Release)  
