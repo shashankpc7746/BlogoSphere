@@ -2,9 +2,9 @@ from flask import Flask, make_response, render_template, request, redirect, flas
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import os
-from email.message import EmailMessage
-import smtplib
 import random
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 
 # Flask(__name__) creates a Flask application instance
 app = Flask(__name__)
@@ -61,25 +61,23 @@ def password_generator_subscriber(name):
 
 def send_email_to_subscriber(name, email, password):
   try:
+    sendgrid_api_key = os.environ.get('SENDGRID_API_KEY', '')
     sender_email = os.environ.get('SENDER_EMAIL', 'blogosphere009@gmail.com')
-    sender_password = os.environ.get('SENDER_PASSWORD', '')
     
-    if not sender_password:
-      print('Warning: SENDER_PASSWORD not set. Email will not be sent.')
+    if not sendgrid_api_key:
+      print('Warning: SENDGRID_API_KEY not set. Email will not be sent.')
       return False
     
-    msg = EmailMessage()
-    msg.set_content( f'Hello {name}, \n your password for Uploding Blogs is {password}. Don\'t share it will anyone 🫣.')
-    msg['Subject'] = 'Thanks for Subscribing ❤'
-    msg['From'] = sender_email
-    msg['To'] = email
-    # Add timeout to prevent hanging (Render may block SMTP)
-    server = smtplib.SMTP('smtp.gmail.com', 587, timeout=10)
-    server.starttls()
-    server.login(sender_email, sender_password)
-    server.sendmail(sender_email, email, msg.as_string())
-    server.quit()
-    print('Email sent successfully')
+    message = Mail(
+      from_email=sender_email,
+      to_emails=email,
+      subject='Thanks for Subscribing ❤',
+      html_content=f'<p>Hello <strong>{name}</strong>,</p><p>Your password for uploading blogs is: <strong>{password}</strong></p><p>Don\'t share it with anyone 🫣</p><p>Best regards,<br>BlogoSphere Team</p>'
+    )
+    
+    sg = SendGridAPIClient(sendgrid_api_key)
+    response = sg.send(message)
+    print(f'Email sent successfully! Status code: {response.status_code}')
     return True
   except Exception as e:
     print(f'Error sending email: {e}')
@@ -387,25 +385,23 @@ def nocache(view):
 # Sending otp via email for accessing admin panel
 def send_email(name, email, otp):
   try:
+    sendgrid_api_key = os.environ.get('SENDGRID_API_KEY', '')
     sender_email = os.environ.get('SENDER_EMAIL', 'blogosphere009@gmail.com')
-    sender_password = os.environ.get('SENDER_PASSWORD', '')
     
-    if not sender_password:
-      print('Warning: SENDER_PASSWORD not set. Email will not be sent.')
+    if not sendgrid_api_key:
+      print('Warning: SENDGRID_API_KEY not set. Email will not be sent.')
       return False
     
-    msg = EmailMessage()
-    msg.set_content(f'Hello {name}, your otp is {otp}')
-    msg['Subject'] = 'Admin Panel Access'
-    msg['From'] = sender_email
-    msg['To'] = email
-    # Add timeout to prevent hanging (Render may block SMTP)
-    server = smtplib.SMTP('smtp.gmail.com', 587, timeout=10)
-    server.starttls()
-    server.login(sender_email, sender_password)
-    server.sendmail(sender_email, email, msg.as_string())
-    server.quit()
-    print('Email sent successfully')
+    message = Mail(
+      from_email=sender_email,
+      to_emails=email,
+      subject='Admin Panel Access - OTP',
+      html_content=f'<p>Hello <strong>{name}</strong>,</p><p>Your OTP for admin panel access is: <strong>{otp}</strong></p><p>This OTP is valid for one-time use only.</p><p>Best regards,<br>BlogoSphere Admin</p>'
+    )
+    
+    sg = SendGridAPIClient(sendgrid_api_key)
+    response = sg.send(message)
+    print(f'OTP email sent successfully! Status code: {response.status_code}')
     return True
   except Exception as e:
     print(f'Error sending email: {e}')
