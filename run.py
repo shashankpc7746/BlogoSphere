@@ -60,17 +60,29 @@ def password_generator_subscriber(name):
       return password
 
 def send_email_to_subscriber(name, email, password):
-  msg = EmailMessage()
-  msg.set_content( f'Hello {name}, \n your password for Uploding Blogs is {password}. Don\'t share it will anyone 🫣.')
-  msg['Subject'] = 'Thanks for Subscribing ❤'
-  msg['From'] = "blogosphere009@gmail.com"
-  msg['To'] = email
-  server = smtplib.SMTP('smtp.gmail.com', 587)
-  server.starttls()
-  server.login('blogosphere009@gmail.com', 'hlsz tpxf ostq voxc')
-  server.sendmail('blogosphere009@gmail.com', email, msg.as_string())
-  server.quit()
-  print('Email sent')
+  try:
+    sender_email = os.environ.get('SENDER_EMAIL', 'blogosphere009@gmail.com')
+    sender_password = os.environ.get('SENDER_PASSWORD', '')
+    
+    if not sender_password:
+      print('Warning: SENDER_PASSWORD not set. Email will not be sent.')
+      return False
+    
+    msg = EmailMessage()
+    msg.set_content( f'Hello {name}, \n your password for Uploding Blogs is {password}. Don\'t share it will anyone 🫣.')
+    msg['Subject'] = 'Thanks for Subscribing ❤'
+    msg['From'] = sender_email
+    msg['To'] = email
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login(sender_email, sender_password)
+    server.sendmail(sender_email, email, msg.as_string())
+    server.quit()
+    print('Email sent successfully')
+    return True
+  except Exception as e:
+    print(f'Error sending email: {e}')
+    return False
 
 # This route is used to check if the user has subscibed or not
 @app.route('/subscribe', methods=["POST", "GET"])
@@ -81,12 +93,15 @@ def subscribe():
     existing_user = Blogosphere_subscribers.query.filter_by(email=email).first()
     if not existing_user:
       password = password_generator_subscriber(name.lower())
-      send_email_to_subscriber(name,email,password)
+      email_sent = send_email_to_subscriber(name,email,password)
       new_user = Blogosphere_subscribers(name=name, email=email, password=password)
       db.session.add(new_user)
       try:
         db.session.commit()
-        flash('Thanks for subscribing!', 'success')
+        if email_sent:
+          flash('Thanks for subscribing! Check your email for password.', 'success')
+        else:
+          flash('Subscribed successfully! Email service unavailable, contact admin for password.', 'warning')
       except Exception as e:
         db.session.rollback()
         flash(f'An error occurred: {e}', 'error')
@@ -370,17 +385,29 @@ def nocache(view):
 
 # Sending otp via email for accessing admin panel
 def send_email(name, email, otp):
-  msg = EmailMessage()
-  msg.set_content(f'Hello {name}, your otp is {otp}')
-  msg['Subject'] = 'Admin Panel Access'
-  msg['From'] = "blogosphere009@gmail.com"
-  msg['To'] = email
-  server = smtplib.SMTP('smtp.gmail.com', 587)
-  server.starttls()
-  server.login('blogosphere009@gmail.com', 'hlsz tpxf ostq voxc')
-  server.sendmail('blogosphere009@gmail.com', email, msg.as_string())
-  server.quit()
-  print('Email sent')
+  try:
+    sender_email = os.environ.get('SENDER_EMAIL', 'blogosphere009@gmail.com')
+    sender_password = os.environ.get('SENDER_PASSWORD', '')
+    
+    if not sender_password:
+      print('Warning: SENDER_PASSWORD not set. Email will not be sent.')
+      return False
+    
+    msg = EmailMessage()
+    msg.set_content(f'Hello {name}, your otp is {otp}')
+    msg['Subject'] = 'Admin Panel Access'
+    msg['From'] = sender_email
+    msg['To'] = email
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login(sender_email, sender_password)
+    server.sendmail(sender_email, email, msg.as_string())
+    server.quit()
+    print('Email sent successfully')
+    return True
+  except Exception as e:
+    print(f'Error sending email: {e}')
+    return False
 
 # Generating random otp number
 def generate_random_otp():

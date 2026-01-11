@@ -59,12 +59,29 @@ Fill in these settings:
 
 - Select **"Free"** plan
 
-### Step 6: Environment Variables (Optional)
+### Step 6: Environment Variables (Required)
 
-Click **"Advanced"** and add:
+Click **"Advanced"** and add these environment variables:
 
-- **Key**: `SECRET_KEY`
-- **Value**: Generate a random string (e.g., `BlogoSphere2024SecureKey!`)
+1. **SECRET_KEY** (Required)
+   - **Key**: `SECRET_KEY`
+   - **Value**: `BlogoSphere2024SecureKey!` (or any random string)
+
+2. **SENDER_EMAIL** (Required for subscribe feature)
+   - **Key**: `SENDER_EMAIL`
+   - **Value**: `your-gmail@gmail.com`
+
+3. **SENDER_PASSWORD** (Required for subscribe feature)
+   - **Key**: `SENDER_PASSWORD`
+   - **Value**: Your Gmail App Password (see below)
+
+**Getting Gmail App Password:**
+1. Go to [Google Account Settings](https://myaccount.google.com/security)
+2. Enable **2-Step Verification**
+3. Go to **App Passwords**
+4. Generate password for "Mail" → "Other (Custom name)"
+5. Copy the 16-character password (e.g., `abcd efgh ijkl mnop`)
+6. Use this as `SENDER_PASSWORD` (remove spaces)
 
 ### Step 7: Deploy!
 
@@ -148,7 +165,42 @@ In Render dashboard, you can:
 
 ## 🎓 Next Steps
 
-1. **Custom Domain**: Add your own domain in Render settings
+### 1. **Custom Domain** (Yes, Render supports it!)
+
+**On Free Tier:**
+1. Go to your service's **Settings** tab
+2. Scroll to **Custom Domain**
+3. Click **"Add Custom Domain"**
+4. Enter your domain (e.g., `blog.yourdomain.com`)
+5. Add the CNAME record to your domain provider:
+   - **Type**: CNAME
+   - **Name**: `blog` (or `www`)
+   - **Value**: `blogosphere-[your-id].onrender.com`
+6. Wait for DNS propagation (5-60 minutes)
+7. SSL certificate is **automatically provided**!
+
+**Popular Domain Providers:**
+- Namecheap, GoDaddy, Google Domains, Cloudflare
+
+### 2. **Update Workflow**
+
+**For Code Changes (HTML/CSS/Python):**
+```bash
+git add .
+git commit -m "Updated feature"
+git push origin main
+```
+Render auto-deploys in 1-2 minutes! ✨
+
+**For Dependency Changes:**
+```bash
+pip install new-package
+pip freeze > requirements.txt
+git add requirements.txt
+git commit -m "Added new package"
+git push origin main
+# Then: "Clear build cache & deploy" in Render
+```
 2. **SSL Certificate**: Automatically provided by Render
 3. **Upgrade Database**: Switch to PostgreSQL for production
 4. **Environment Variables**: Store sensitive data securely
