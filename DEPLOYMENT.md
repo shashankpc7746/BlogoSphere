@@ -52,7 +52,7 @@ Fill in these settings:
 
 **Build & Deploy Settings:**
 
-- **Build Command**: `./build.sh`
+- **Build Command**: `pip install -r requirements.txt`
 - **Start Command**: `gunicorn run:app`
 
 **Instance Type:**
